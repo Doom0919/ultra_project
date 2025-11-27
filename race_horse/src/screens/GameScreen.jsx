@@ -1,6 +1,6 @@
 import React from "react";
-import Horse from '../components/Horse';
-import { useEffect, useState } from "react";
+import horse from '../assets/horses/defaultHorse.png';
+import {  useState } from "react";
 import playerHorse from '../assets/horses/playerhorse.png';
 
 // import ShagaiThrow from '../components/shagaithrow.jsx';
@@ -64,7 +64,7 @@ export default function GameScreen() {
                                 {player1Position === index && <img src={playerHorse} alt="Player Horse" style={{ width: '20px', height: '30px' , }} />}
                                 {player2Position === index && <img src={playerHorse} alt="Player Horse" style={{ width: '20px', height: '30px' , }} />}
                             </div>
-                            <Horse />
+                             <img src={horse} alt="Horse" style={{ width: '80px', height: 'auto' ,}} />
                             <div className="right"> 
                                 {player3Position === index && <img src={playerHorse} alt="Player Horse" style={{ width: '20px', height: '30px' , }} />}
                                 {player4Position === index && <img src={playerHorse} alt="Player Horse" style={{ width: '20px', height: '30px' , }} />}
