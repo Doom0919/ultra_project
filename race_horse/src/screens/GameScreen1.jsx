@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Game from './GameScreen.jsx'
 export default function GameScreen1() {
     return (
         <div className="parent" style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
@@ -11,7 +11,7 @@ export default function GameScreen1() {
                 </div>
                 <div style={{ flex: 2 }}></div>
             </div>
-            <div className="div2" style={{ flex: 11, borderBottom: '1px solid black', backgroundColor: '#E1E4F5', borderRadius: '10px', margin: '10px' }}></div>
+            <div className="div2" style={{ flex: 11, borderBottom: '1px solid black', backgroundColor: '#E1E4F5', borderRadius: '10px', margin: '10px' }}><Game/></div>
             <div className="div3" style={{ flex: 1, display: 'flex', borderRight: '1px solid black', backgroundColor: '#E1E4F5', borderRadius: '10px', margin: '10px' }}>
                 <div style={{ flex: 2, display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', padding: '20px' }}>
                     {[{ id: 1, color: '#FF6B6B' }, { id: 2, color: '#4ECDC4' }, { id: 3, color: '#45B7D1' }].map((tire) => (
