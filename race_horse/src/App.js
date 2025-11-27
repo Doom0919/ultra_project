@@ -3,11 +3,12 @@ import './App.css';
 import React from 'react';
 import HomeScreen from './screens/HomeScreen.jsx';
 import GameScreen from './screens/GameScreen.jsx';
+import GameScreen1 from './screens/GameScreen1.jsx';
 
 function App() {
   return (
     <div className="App">
-      <GameScreen />
+      <GameScreen1 />
     </div>
   );
 }
