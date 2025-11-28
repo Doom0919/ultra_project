@@ -11,7 +11,7 @@ import HomeScreen from './screens/HomeScreen.jsx';
 function App() {
   return (
     <div className="App">
-      <HomeScreen/>
+      <GameScreen1/>
     </div>
   );
 }

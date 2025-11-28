@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import horse from "../assets/horses/defaultHorse.png";
 import playerHorse from "../assets/horses/playerhorse.png";
@@ -15,14 +14,6 @@ import { motion } from "framer-motion";
 
 const ICONS = { mori, temee, honi, yamaa };
 const TYPES = ["mori", "temee", "honi", "yamaa"];
-=======
-import React from "react";
-import horse from '../assets/horses/defaultHorse.png';
-import {  useState } from "react";
-import playerHorse from '../assets/horses/playerhorse.png';
-import '../styles/GameScreen.css';
-/// import ShagaiThrow from '../components/shagaithrow.jsx';
->>>>>>> cb52168d644502369b9f001987c21aaf8a8f5ff1
 
 export default function GameScreen() {
   const [player1Position, setPlayer1Position] = useState(0);
@@ -91,13 +82,13 @@ export default function GameScreen() {
 
 
   const skills = [
-    { id: 1, icon: tashuur, name: "Ташуур" },
-    { id: 2, icon: imeel, name: "Эмээл" },
-    { id: 3, icon: shout, name: "Хаших" },
+    { id: 1, icon: tashuur, name: "Тахшуур" },
+    { id: 2, icon: imeel, name: "Имээл" },
+    { id: 3, icon: shout, name: "Дуудлага" },
   ];
 
   const positions = [
-    { top: "100%", left: "10%", transform: "rotate(90deg)" },
+     { top: "100%", left: "10%", transform: "rotate(90deg)" },
     { top: "100%", left: "17.3%", transform: "rotate(90deg)" },
     { top: "100%", left: "24.6%", transform: "rotate(90deg)" },
     { top: "100%", left: "31.6%", transform: "rotate(90deg)" },
@@ -157,7 +148,7 @@ export default function GameScreen() {
   const profiles = [
     {
       id: 1,
-      name: "Т",
+      name: "Та",
       image: "https://i.pravatar.cc/150?img=12",
       borderColor: "border-yellow-400",
     },
