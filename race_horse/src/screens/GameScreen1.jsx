@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c099a263b06c41f6c64c247f588210feca7c0e34
 import React, { useState } from "react";
 import horse from "../assets/horses/defaultHorse.png";
 import playerHorse from "../assets/horses/playerhorse.png";
@@ -14,6 +18,17 @@ import { motion } from "framer-motion";
 
 const ICONS = { mori, temee, honi, yamaa };
 const TYPES = ["mori", "temee", "honi", "yamaa"];
+<<<<<<< HEAD
+=======
+=======
+import React from "react";
+import horse from '../assets/horses/defaultHorse.png';
+import {  useState } from "react";
+import playerHorse from '../assets/horses/playerhorse.png';
+import '../styles/GameScreen.css';
+/// import ShagaiThrow from '../components/shagaithrow.jsx';
+>>>>>>> cb52168d644502369b9f001987c21aaf8a8f5ff1
+>>>>>>> c099a263b06c41f6c64c247f588210feca7c0e34
 
 export default function GameScreen() {
   const [player1Position, setPlayer1Position] = useState(0);
