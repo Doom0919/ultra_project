@@ -43,8 +43,6 @@ export default function GameScreen() {
   };
 
   const throwShagai = () => {
-  if (currentTurn !== 1) return;
-
   setIsThrowing(true);
 
   setTimeout(() => {
@@ -424,7 +422,7 @@ export default function GameScreen() {
                   height: "6rem",
                   borderRadius: "9999px",
                   background:
-                    currentTurn === 1 ? "rgb(34, 197, 94)" : "rgb(239, 68, 68)",
+                    currentTurn === 1 ? "rgb(34, 197, 94)" : "rgb(34, 197, 94)",
                   boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
                   display: "flex",
                   alignItems: "center",
@@ -446,7 +444,7 @@ export default function GameScreen() {
                     background:
                       currentTurn === 1
                         ? "rgb(22, 163, 74)"
-                        : "rgb(220, 38, 38)",
+                        : "rgb(22, 163, 74)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -464,7 +462,7 @@ export default function GameScreen() {
                       ? "..."
                       : currentTurn === 1
                       ? "ШИДЭХ"
-                      : "ХҮЛЭЭХ"}
+                      : "ШИДЭХ"}
                   </div>
                 </div>
               </div>
