@@ -3,7 +3,7 @@ import horse from '../assets/horses/defaultHorse.png';
 import {  useState } from "react";
 import playerHorse from '../assets/horses/playerhorse.png';
 import '../styles/GameScreen.css';
-// import ShagaiThrow from '../components/shagaithrow.jsx';
+/// import ShagaiThrow from '../components/shagaithrow.jsx';
 
 export default function GameScreen() {
     const [player1Position, setPlayer1Position] = useState(0);
