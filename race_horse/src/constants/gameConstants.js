@@ -97,3 +97,4 @@ export const SKILL_ITEMS = [
 
 // Animation duration
 export const THROW_ANIMATION_DURATION = 900;
+export const THROW_ANIMATION_DURATION_SECONDS = THROW_ANIMATION_DURATION / 1000;

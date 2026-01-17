@@ -6,7 +6,7 @@ import temee from "../assets/images/temee.png";
 import honi from "../assets/images/honi.png";
 import yamaa from "../assets/images/yamaa.png";
 import hiws1 from "../assets/images/hiws1.jpg";
-import { THROW_ANIMATION_DURATION } from "../constants/gameConstants";
+import { THROW_ANIMATION_DURATION, THROW_ANIMATION_DURATION_SECONDS } from "../constants/gameConstants";
 import { generateShagaiThrow } from "../utils/gameUtils";
 
 const ICONS = { mori, temee, honi, yamaa };
@@ -70,7 +70,7 @@ export default function ShagaiThrow() {
                 ? { y: -120, rotate: 720, opacity: 0.7 }
                 : { y: 0, rotate: 0, opacity: 1 }
             }
-            transition={{ duration: THROW_ANIMATION_DURATION / 1000 }}
+            transition={{ duration: THROW_ANIMATION_DURATION_SECONDS }}
             />
         ))}
         </div>

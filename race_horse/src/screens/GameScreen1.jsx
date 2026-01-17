@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import horse from "../assets/horses/defaultHorse.png";
 import playerHorse from "../assets/horses/playerhorse.png";
 import "../styles/GameScreen.css";
@@ -11,7 +11,7 @@ import temee from "../assets/images/temee.png";
 import honi from "../assets/images/honi.png";
 import yamaa from "../assets/images/yamaa.png";
 import { motion } from "framer-motion";
-import { RACE_POSITIONS, DEFAULT_PROFILES, SHAGAI_TYPES, THROW_ANIMATION_DURATION } from "../constants/gameConstants";
+import { RACE_POSITIONS, DEFAULT_PROFILES, SHAGAI_TYPES, THROW_ANIMATION_DURATION, THROW_ANIMATION_DURATION_SECONDS } from "../constants/gameConstants";
 import { generateShagaiThrow, calculateMovement } from "../utils/gameUtils";
 
 const ICONS = { mori, temee, honi, yamaa };
@@ -39,7 +39,7 @@ export default function GameScreen() {
     { id: 3, icon: shout, name: "Дуудлага" },
   ], []);
 
-  const handleImageUpload = (skillIndex) => {
+  const handleImageUpload = useCallback((skillIndex) => {
     const imageUrl = prompt("Зургийн линк оруулна уу:");
     if (imageUrl) {
       setUploadedImages((prev) => ({
@@ -47,13 +47,13 @@ export default function GameScreen() {
         [`skill${skillIndex}`]: imageUrl,
       }));
     }
-  };
+  }, []);
 
-  const handleSkillClick = (skillId) => {
-    setSelectedSkill(selectedSkill === skillId ? null : skillId);
-  };
+  const handleSkillClick = useCallback((skillId) => {
+    setSelectedSkill((prev) => prev === skillId ? null : skillId);
+  }, []);
 
-  const throwShagai = () => {
+  const throwShagai = useCallback(() => {
     setIsThrowing(true);
 
     setTimeout(() => {
@@ -74,6 +74,7 @@ export default function GameScreen() {
           setPlayer4Position((prev) => prev + move);
           break;
         default:
+          // All valid cases (1-4) are handled above
           break;
       }
 
@@ -83,7 +84,7 @@ export default function GameScreen() {
       // Ээлжийг дараагийн тоглогч руу шилжүүлэх
       setCurrentTurn((prev) => (prev % 4) + 1);
     }, THROW_ANIMATION_DURATION);
-  };
+  }, [currentTurn]);
 
 
   // Memoize static style objects
@@ -229,7 +230,7 @@ export default function GameScreen() {
                             ? { y: -50, rotate: 1090, opacity: 0.7 }
                             : { y: 0, rotate: 0, opacity: 1 }
                         }
-                        transition={{ duration: THROW_ANIMATION_DURATION / 1000 }}
+                        transition={{ duration: THROW_ANIMATION_DURATION_SECONDS }}
                         />
             ))}
           </div>
